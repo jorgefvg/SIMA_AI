@@ -1,0 +1,16 @@
+name: sima-ai
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - matplotlib
+  - pandas=2.2.2
+  - numpy=1.26.4
+  - scikit-learn=1.4.2
+  - statsmodels=0.14.2
+  - skl2onnx=1.16.0
+  - onnx=1.15.0
+  - pytest=8.2.0
+  - pytest-cov=5.0.0

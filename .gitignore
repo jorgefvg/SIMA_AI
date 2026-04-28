@@ -1,0 +1,81 @@
+# Generacion de documentacion
+docs/
+
+# ─────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Archivos generados por ejecución
+*.log
+*.tmp
+*.temp
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+.eggs/
+
+# Entornos Conda
+.conda/
+*.conda
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_convert/
+jupyter_cache/
+.DS_Store
+
+# Coverage / pytest
+.coverage
+coverage.xml
+htmlcov/
+.cache/
+.pytest_cache/
+
+# Modelos o datos grandes
+*.h5
+*.pkl
+*.pt
+*.pth
+*.joblib
+*.npy
+*.npz
+
+# ─────────────────────────────────────────
+# Windows
+# ─────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*$RECYCLE.BIN/
+
+# ─────────────────────────────────────────
+# General ignores
+# ─────────────────────────────────────────
+*.bak
+*.swp
+*.swm
+*.swo
+*.orig
+*.tmp
+*.temp
+
+# Archivos de editor adicionales
+.idea/
+*.iml
+
+# Archivos grandes que no deben ir al repo
+*.zip
+*.tar.gz
+*.7z

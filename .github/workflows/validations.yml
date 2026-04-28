@@ -1,0 +1,47 @@
+name: Validación y pruebas automáticas
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pre-commit-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar pre-commit
+        run: pip install pre-commit
+
+      - name: Ejecutar pre-commit en todos los archivos
+        run: pre-commit run --all-files
+
+  run-tests:
+    runs-on: ubuntu-latest
+    needs: pre-commit-check  # <- No corre pruebas si falla formato
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install pytest coverage
+
+      - name: Ejecutar tests con coverage
+        run: |
+          coverage run -m pytest
+          coverage report
