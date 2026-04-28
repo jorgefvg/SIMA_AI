@@ -17,7 +17,7 @@ def exportar_modelo_onnx(modelo, num_features: int, ruta: str):
 
     initial_type = [("float_input", FloatTensorType([None, num_features]))]
 
-    onnx_model = convert_sklearn(modelo, initial_types=initial_type)
+    onnx_model = convert_sklearn(modelo, initial_types=initial_type, target_opset=12)
 
     with open(ruta, "wb") as f:
         f.write(onnx_model.SerializeToString())
