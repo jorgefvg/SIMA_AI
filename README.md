@@ -3,8 +3,8 @@
 
 ## Requisitos
 
-- Instalar miniconda
-- Instalar pre-commit
+- Instalar miniconda.
+- Instalar pre-commit.
 - En vs code se puede instalar la extension para formatear codigo .py cada vez que guardas (Black Formatter de Microsoft)
 - Python 3.10 recomendado.
 - Crear y activar el entorno de trabajo con conda:
