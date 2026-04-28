@@ -2,6 +2,10 @@ pandas==2.2.2
 numpy==1.26.4
 scikit-learn==1.4.2
 statsmodels==0.14.2
-skl2onnx==1.16.0
+matplotlib==3.10.8
 onnx==1.15.0
-matplotlib
+skl2onnx==1.16.0
+onnxconverter-common==1.16.0
+scipy==1.15.2
+joblib==1.5.3
+threadpoolctl==3.6.0
