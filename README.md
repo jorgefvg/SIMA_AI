@@ -1,15 +1,25 @@
 
-# Adaptive Comfort - Random Forest Model
+# Modelo de confort termico adaptativo - Random Forest
 
 ## Requisitos
 
-- Instalar miniconda
-- Instalar pre-commit
+- Instalar miniconda.
+- Instalar pre-commit.
 - En vs code se puede instalar la extension para formatear codigo .py cada vez que guardas (Black Formatter de Microsoft)
 - Python 3.10 recomendado.
-- Instalar dependencias:
+- Crear y activar el entorno de trabajo con conda:
+    ```
+    conda env create -f environment.yml
+    conda activate sima-ai
+    ```
+- Nota: Tambien se pueden instalar las dependencias apartir de un archivo .txt:
     ```
     pip install -r requirements.txt
+    ```
+- Después de clonar el repositorio usted debería ejecutar el siguiente comando:
+
+    ```
+    pre-commit install
     ```
 
 ## Paso 1 - Generar dataset
@@ -24,7 +34,7 @@ data/adaptive_comfort_dataset.csv
 python main.py
 ```
 Genera:
-adaptive_comfort_rf.onnx
+modelo_confort.onnx
 
 ## Uso en STM32
 
