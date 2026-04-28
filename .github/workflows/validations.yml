@@ -40,8 +40,9 @@ jobs:
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          # Instalamos las librerías del proyecto + las de testing
-          pip install -r requirements.txt
+          pip install --upgrade --force-reinstall -r requirements.txt
+          # Verificando la instalacion de dependencias
+          pip show statsmodels
 
       - name: Ejecutar tests con coverage
         run: |
