@@ -16,7 +16,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.10"
 
       - name: Instalar pre-commit
         run: pip install pre-commit
@@ -42,7 +42,6 @@ jobs:
           python -m pip install --upgrade pip
           # Instalamos las librerías del proyecto + las de testing
           pip install -r requirements.txt
-          pip install pytest coverage
 
       - name: Ejecutar tests con coverage
         run: |
